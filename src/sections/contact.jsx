@@ -36,7 +36,6 @@ function Contact() {
             message: "Thank you! I will get back to you as soon as possible.",
           });
           setFormData({ name: "", email: "", message: "" });
-          // Clear status after 5 seconds
           setTimeout(() => setStatus({ type: "", message: "" }), 5000);
         },
         (error) => {
