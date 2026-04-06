@@ -6,7 +6,7 @@ function Projects() {
       title: "Interview_Strategy",
       description: "AI-powered interview preparation platform that analyzes resumes and job descriptions to generate personalized questions, preparation roadmap, and readiness score.",
       tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Groq API", "AI Integration", "PDF Generation", "Resume Parsing", "JavaScript", "SCSS"],
-      link: "https://pomodoro-delta-opal.vercel.app/"
+      link: "https://interview-helper-ten-ruby.vercel.app/"
     },
     {
       title: "RentEase",
