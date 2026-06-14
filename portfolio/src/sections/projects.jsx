@@ -3,6 +3,12 @@ import "../styles/project.css";
 function Projects() {
   const projects = [
     {
+      title: "Customer_Churn_Prediction_And_Agentic_Retention_System",
+      description: "Developed an AI-driven customer churn prediction and retention intelligence system using Machine Learning and Generative AI concepts. Built a telecom customer churn prediction pipeline using XGBoost, data preprocessing, feature scaling, and threshold optimization to identify high-risk customers. Extended the project into an Agentic AI workflow using LangGraph, FAISS-based RAG, HuggingFace embeddings, and Groq LLM to generate explainable retention strategies and structured business recommendations.",
+      tags: ["Python", "Machine Learning", "XGBoost", "Scikit-learn", "Pandas", "NumPy", "Streamlit", "Generative AI", "LangGraph", "LangChain", "FAISS", "RAG", "HuggingFace Embeddings", "Groq API", "LLM", "Prompt Engineering", "Data Preprocessing", "Model Deployment"],
+      link: "https://customerchurnprediction-2k327gcbblu4dawrhawsit.streamlit.app/"
+    },
+    {
       title: "Interview_Strategy",
       description: "AI-powered interview preparation platform that analyzes resumes and job descriptions to generate personalized questions, preparation roadmap, and readiness score.",
       tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Groq API", "AI Integration", "PDF Generation", "Resume Parsing", "JavaScript", "SCSS"],
