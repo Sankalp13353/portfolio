@@ -1,37 +1,195 @@
 .about {
-  min-height: 50vh;
-  padding: 6rem 2rem;
-  background-color: var(--bg-main);
+  position: relative;
+  min-height: auto;
+  padding: 4rem 2rem;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about-content {
-  max-width: 800px;
+.about-container {
   width: 100%;
-  text-align: center;
+  max-width: 1100px;
+  z-index: 2;
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  letter-spacing: -0.03em;
+/* Intro bio styling */
+.intro-bio-card {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 3rem;
 }
 
-
-.about-text {
-  padding: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
+.intro-bio-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-main);
 }
 
-.about-text p {
-  font-size: 1.25rem;
-  margin-bottom: 0;
+.intro-bio-card p {
+  font-size: 1rem;
   color: var(--text-muted);
-  line-height: 1.8;
-  text-align: center;
+  line-height: 1.65;
+}
+
+/* Timeline columns */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.timeline-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-title-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--google-blue);
+}
+
+.section-title-box h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.timeline-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--google-blue);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.company-name, .institution-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-card ul {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.timeline-card li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.education-grade {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--google-green);
+  margin-top: 0.5rem;
+}
+
+/* Skills list grid */
+.skills-section h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+.skills-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-cat-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--google-blue);
+}
+
+.cat-header h4 {
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.cat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0.35rem 0.7rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.skill-tag:hover {
+  background: rgba(66, 133, 244, 0.06);
+  border-color: rgba(66, 133, 244, 0.25);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 992px) {
+  .about {
+    padding: 6rem 1.5rem;
+  }
+  
+  .timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-bio-card, .timeline-card, .skill-cat-card {
+    padding: 1.25rem;
+  }
+  
+  .skills-categories-grid {
+    grid-template-columns: 1fr;
+  }
 }

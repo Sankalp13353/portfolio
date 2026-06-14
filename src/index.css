@@ -1,39 +1,54 @@
 :root {
-  /* Color Palette - Premium Neutral */
-  --bg-main: #FAFAFA;
-  --bg-card: #FFFFFF;
+  /* Color Palette - Richer Dark Theme (Less Black) */
+  --bg-main: #0c1017;
+  --bg-card: #151a23;
+  --bg-card-hover: #1c232f;
+  
+  /* Text colors */
+  --text-main: #f3f4f6;      /* Gray 100 */
+  --text-muted: #9ca3af;     /* Gray 400 */
+  --text-light: #6b7280;     /* Gray 500 */
+  --text-inverse: #0b0c10;
 
-  --text-main: #171717;
-  /* Neutral 900 */
-  --text-muted: #737373;
-  /* Neutral 500 */
-  --text-light: #A3A3A3;
-  /* Neutral 400 */
+  /* Google Brand Accents */
+  --google-blue: #4285F4;
+  --google-red: #EA4335;
+  --google-yellow: #FBBC05;
+  --google-green: #34A853;
 
-  /* Accents */
-  --accent-primary: #171717;
-  /* Mono Accent */
-  --accent-secondary: #2563EB;
-  /* Royal Blue (Subtle) */
+  --accent-primary: var(--google-blue);
+  --accent-secondary: #a855f7; /* Violet */
+  --accent-success: var(--google-green);
+  
+  /* Gradients */
+  --gradient-blue: linear-gradient(135deg, #4285F4 0%, #34a853 100%);
+  --gradient-text: linear-gradient(135deg, #e0e7ff 0%, #818cf8 50%, #c084fc 100%);
+  --gradient-google: linear-gradient(90deg, #4285F4, #ea4335, #fbbc05, #34a853);
 
   /* Borders & Shadows */
-  --border-subtle: #E5E5E5;
-  --border-focus: #171717;
-
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+  --border-subtle: #242a35;
+  --border-hover: #323a47;
+  --border-glow: rgba(66, 133, 244, 0.2);
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.4);
 
   /* Typography */
-  --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
 
-  /* Spacing & Radius */
+  /* Border Radii */
   --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
   --radius-full: 9999px;
+  
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Base resets */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,26 +58,50 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  background-color: var(--bg-main);
 }
 
 body {
   font-family: var(--font-main);
   background-color: var(--bg-main);
+  background-image: 
+    /* Soft ambient AI-themed glows */
+    radial-gradient(circle at 15% 25%, rgba(66, 133, 244, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(52, 168, 83, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.03) 0%, transparent 50%),
+    /* Technical blueprint grid pattern */
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100vw 100vh, 100vw 100vh, 100vw 100vh, 40px 40px, 40px 40px;
+  background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: #22252e;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #313642;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
   color: var(--text-main);
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
@@ -73,7 +112,7 @@ p {
 a {
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
+  transition: all var(--transition-fast);
 }
 
 ul {
@@ -90,12 +129,50 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  outline: none;
+  transition: all var(--transition-fast);
 }
 
-/* Utility Class for Glass Panels (Clean Version) */
+/* Gradient text highlight */
+.highlight {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Flat Professional Card panels */
 .glass-panel {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.glass-panel:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Section headings layout */
+section h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+/* Decorative gradients */
+.soft-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(66, 133, 244, 0.05) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
 }

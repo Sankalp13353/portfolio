@@ -4,10 +4,12 @@ import About from "./sections/about";
 import Projects from "./sections/projects";
 import Contact from "./sections/contact";
 import Footer from "./components/footer";
+import AIElementsBackground from "./components/AIElementsBackground";
 
 function App() {
   return (
     <div>
+      <AIElementsBackground />
       <Navbar />
       <Home />
       <About />

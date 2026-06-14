@@ -1,0 +1,132 @@
+.ai-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Floating AI Icons */
+.ai-node {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.02);
+}
+
+.node-1 {
+  top: 15%;
+  left: 5%;
+  animation: float-slow 22s ease-in-out infinite alternate;
+}
+.node-2 {
+  top: 50%;
+  right: -5%;
+  animation: float-slow 28s ease-in-out infinite alternate-reverse;
+}
+.node-3 {
+  bottom: 5%;
+  left: 20%;
+  animation: float-slow 25s ease-in-out infinite alternate;
+}
+.node-4 {
+  top: 25%;
+  right: 25%;
+  animation: float-slow 18s ease-in-out infinite alternate-reverse;
+}
+
+/* Faint Floating Text Nodes */
+.tech-node {
+  position: absolute;
+  font-family: var(--font-code);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.025);
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tn-1 { top: 20%; left: 10%; transform: rotate(-5deg); animation: float-text 20s infinite alternate; }
+.tn-2 { top: 60%; right: 15%; transform: rotate(5deg); animation: float-text 25s infinite alternate-reverse; }
+.tn-3 { bottom: 20%; left: 15%; transform: rotate(10deg); animation: float-text 22s infinite alternate; }
+.tn-4 { top: 80%; right: 30%; transform: rotate(-10deg); animation: float-text 18s infinite alternate-reverse; }
+
+@keyframes float-slow {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(40px, 60px) rotate(20deg); }
+}
+
+@keyframes float-text {
+  0% { transform: translate(0, 0) rotate(var(--rotation, 0deg)); }
+  100% { transform: translate(30px, -20px) rotate(calc(var(--rotation, 0deg) + 5deg)); }
+}
+
+/* Data Streams (Represents ML Pipelines) */
+.data-stream {
+  position: absolute;
+}
+
+.stream-x {
+  height: 1px;
+  width: 200vw;
+  left: -50vw;
+  background: linear-gradient(90deg, transparent, rgba(66, 133, 244, 0.15), transparent);
+}
+
+.stream-y {
+  width: 1px;
+  height: 200vh;
+  top: -50vh;
+  background: linear-gradient(180deg, transparent, rgba(52, 168, 83, 0.15), transparent);
+}
+
+.stream-1 {
+  top: 30%;
+  animation: stream-move-x 15s linear infinite;
+}
+
+.stream-2 {
+  bottom: 40%;
+  animation: stream-move-x 22s linear infinite reverse;
+}
+
+.stream-3 {
+  left: 65%;
+  animation: stream-move-y 18s linear infinite;
+}
+
+@keyframes stream-move-x {
+  0% { transform: translateX(-30%); }
+  100% { transform: translateX(30%); }
+}
+
+@keyframes stream-move-y {
+  0% { transform: translateY(-30%); }
+  100% { transform: translateY(30%); }
+}
+
+/* Vector Embedding Points */
+.vector-point {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--google-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--google-blue), 0 0 20px var(--google-blue);
+  opacity: 0;
+}
+
+.vp-1 { top: 35%; left: 25%; animation: pulse-point 4s infinite alternate; }
+.vp-2 { top: 65%; left: 55%; animation: pulse-point 5s infinite alternate 1s; }
+.vp-3 { top: 15%; right: 35%; animation: pulse-point 6s infinite alternate 2s; }
+.vp-4 { bottom: 20%; right: 15%; animation: pulse-point 4.5s infinite alternate 0.5s; }
+.vp-5 { top: 85%; left: 40%; animation: pulse-point 5.5s infinite alternate 1.5s; }
+.vp-6 { top: 45%; right: 10%; animation: pulse-point 4.2s infinite alternate 2.5s; }
+
+@keyframes pulse-point {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 0.4; transform: scale(1.5); }
+}

@@ -1,56 +1,286 @@
 .contact {
-  min-height: 80vh;
-  padding: 6rem 2rem;
+  position: relative;
+  min-height: auto;
+  padding: 4rem 2rem 6rem;
+  background-color: transparent;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: var(--bg-main);
-}
-
-.contact-content {
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.contact-desc {
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  margin-bottom: 3rem;
-  line-height: 1.6;
+  justify-content: center;
 }
 
 .contact-container {
-  padding: 0;
-  margin-bottom: 4rem;
-  background: transparent;
-  box-shadow: none;
-  border: none;
+  width: 100%;
+  max-width: 1100px;
+  z-index: 2;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 1rem;
+}
 
-
-.social-links {
+.achievements-column, .contact-column {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.social-link {
-  color: var(--text-muted);
-  font-weight: 500;
-  font-size: 0.95rem;
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.social-link:hover {
+.achievements-column h3, .contact-column h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
   color: var(--text-main);
-  border-bottom-color: var(--text-main);
+}
+
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Achievement Card */
+.achievement-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.achievement-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.achievement-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+}
+
+.achievement-icon.blue {
+  color: var(--google-blue);
+  border-color: rgba(66, 133, 244, 0.2);
+}
+
+.achievement-icon.green {
+  color: var(--google-green);
+  border-color: rgba(52, 168, 83, 0.2);
+}
+
+.achievement-icon.yellow {
+  color: var(--google-yellow);
+  border-color: rgba(251, 188, 5, 0.2);
+}
+
+.achievement-header h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.achievement-org {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+.achievement-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Contact Column Card */
+.contact-card {
+  padding: 2.25rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.contact-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.mail-icon {
+  color: var(--google-blue);
+  margin-bottom: 0.25rem;
+}
+
+.contact-card-header h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.contact-card-header p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Email action row */
+.email-action-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.email-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.email-text-box {
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.9rem;
+  color: var(--text-muted);
+  font-family: var(--font-code);
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.email-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.82rem;
+  transition: all var(--transition-fast);
+}
+
+.email-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-hover);
+}
+
+.email-copy-btn.copied {
+  background: rgba(52, 168, 83, 0.06);
+  border-color: rgba(52, 168, 83, 0.2);
+  color: var(--google-green);
+}
+
+.email-send-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  background: var(--google-blue);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+}
+
+.email-send-btn:hover {
+  background: #357ae8;
+  transform: translateY(-1px);
+}
+
+/* Social links box */
+.contact-socials-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+}
+
+.socials-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.socials-badges {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.015);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.social-badge:hover {
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.social-badge.linkedin:hover {
+  border-color: rgba(66, 133, 244, 0.25);
+  background: rgba(66, 133, 244, 0.05);
+  color: var(--google-blue);
+}
+
+.social-badge.github:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .contact {
+    padding: 6rem 1.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievement-card, .contact-card {
+    padding: 1.25rem;
+  }
+  
+  .email-row {
+    flex-direction: column;
+  }
+  
+  .email-copy-btn {
+    padding: 0.65rem;
+    justify-content: center;
+  }
+
+  .socials-badges {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
