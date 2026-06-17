@@ -17,6 +17,12 @@ function Contact() {
 
   const achievements = [
     {
+      title: "Google Student College Ambassador",
+      organization: "Google",
+      description: "Selected to represent Google on campus, organizing technical events and fostering a community of student developers.",
+      icon: <Star size={18} className="achievement-icon blue" />
+    },
+    {
       title: "XR Creator Hackathon",
       organization: "WAVES Summit (Nov 2024)",
       description: "Qualified for Round 01/02 of the XR Creator Hackathon for an innovative XR solution concept focused on user experience.",
