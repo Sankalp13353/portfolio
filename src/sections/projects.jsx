@@ -29,7 +29,7 @@ function Projects() {
     },
     {
       title: "React Resume Builder",
-      date: "2026",
+      date: "June 2026",
       description: "I built a Resume Builder web application that allows users to create professional resumes through an intuitive interface, preview them in real time, and download them as PDF documents. I have personally used resume-building tools while applying for internships and opportunities and wanted a simpler, free, and user-friendly alternative.",
       tags: ["React.js", "Resume Builder", "PDF Generation", "Real-Time Preview", "Responsive Design", "JavaScript", "HTML5","CSS3"],
       link: "https://react-resume-builder-blush.vercel.app/",
