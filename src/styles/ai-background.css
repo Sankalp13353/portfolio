@@ -9,7 +9,6 @@
   overflow: hidden;
 }
 
-/* Floating AI Icons */
 .ai-node {
   position: absolute;
   color: rgba(255, 255, 255, 0.02);
@@ -36,7 +35,6 @@
   animation: float-slow 18s ease-in-out infinite alternate-reverse;
 }
 
-/* Faint Floating Text Nodes */
 .tech-node {
   position: absolute;
   font-family: var(--font-code);
@@ -64,7 +62,6 @@
   100% { transform: translate(30px, -20px) rotate(calc(var(--rotation, 0deg) + 5deg)); }
 }
 
-/* Data Streams (Represents ML Pipelines) */
 .data-stream {
   position: absolute;
 }
@@ -108,7 +105,6 @@
   100% { transform: translateY(30%); }
 }
 
-/* Vector Embedding Points */
 .vector-point {
   position: absolute;
   width: 5px;

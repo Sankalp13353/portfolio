@@ -40,7 +40,6 @@
   gap: 1.25rem;
 }
 
-/* Achievement Card */
 .achievement-card {
   padding: 1.5rem;
   border-radius: var(--radius-md);
@@ -96,7 +95,6 @@
   line-height: 1.5;
 }
 
-/* Contact Column Card */
 .contact-card {
   padding: 2.25rem;
   border-radius: var(--radius-lg);
@@ -130,7 +128,6 @@
   line-height: 1.5;
 }
 
-/* Email action row */
 .email-action-area {
   display: flex;
   flex-direction: column;
@@ -199,7 +196,6 @@
   transform: translateY(-1px);
 }
 
-/* Social links box */
 .contact-socials-box {
   display: flex;
   flex-direction: column;

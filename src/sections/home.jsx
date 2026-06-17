@@ -8,7 +8,6 @@ function Home() {
       <div className="soft-glow" style={{ bottom: "10%", right: "15%" }}></div>
 
       <div className="home-container">
-        {/* Left Column: Hero Text */}
         <div className="hero-text-content">
           <div className="status-badge">
             <span className="status-dot"></span>
@@ -35,7 +34,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Right Column: Google style Developer Card */}
         <div className="hero-card-container">
           <div className="profile-focus-card glass-panel">
             <div className="card-badge">

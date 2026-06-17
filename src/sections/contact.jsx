@@ -44,7 +44,6 @@ function Contact() {
         <h2>Achievements & <span className="highlight">Contact</span></h2>
         
         <div className="contact-grid">
-          {/* Left Column: Certifications & Extra-Curriculars */}
           <div className="achievements-column">
             <h3>Activities & Credentials</h3>
             <div className="achievements-list">
@@ -63,7 +62,6 @@ function Contact() {
             </div>
           </div>
 
-          {/* Right Column: Contact Card */}
           <div className="contact-column">
             <h3>Get In Touch</h3>
             <div className="contact-card glass-panel">

@@ -23,7 +23,6 @@
   border-color: var(--border-hover);
 }
 
-/* Brand logo */
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -45,7 +44,6 @@
   color: var(--google-blue);
 }
 
-/* Nav links */
 .navbar-links {
   display: flex;
   align-items: center;
@@ -64,7 +62,6 @@
   color: var(--text-main);
 }
 
-/* GitHub action button */
 .github-btn {
   display: flex;
   align-items: center;

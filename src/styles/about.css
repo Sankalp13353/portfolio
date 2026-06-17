@@ -14,7 +14,6 @@
   z-index: 2;
 }
 
-/* Intro bio styling */
 .intro-bio-card {
   padding: 2rem;
   border-radius: var(--radius-lg);
@@ -34,7 +33,6 @@
   line-height: 1.65;
 }
 
-/* Timeline columns */
 .timeline-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -116,7 +114,6 @@
   margin-top: 0.5rem;
 }
 
-/* Skills list grid */
 .skills-section h3 {
   font-size: 1.35rem;
   font-weight: 700;

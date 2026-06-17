@@ -81,7 +81,6 @@ function About() {
       <div className="about-container">
         <h2>About & <span className="highlight">Skills</span></h2>
         
-        {/* Intro bio */}
         <div className="intro-bio-card glass-panel">
           <h3>Professional Summary</h3>
           <p>
@@ -89,9 +88,7 @@ function About() {
           </p>
         </div>
 
-        {/* Timeline Grid */}
         <div className="timeline-grid">
-          {/* Work Experience */}
           <div className="timeline-section">
             <div className="section-title-box">
               <Briefcase size={20} className="section-title-icon" />
@@ -113,7 +110,6 @@ function About() {
             </div>
           </div>
 
-          {/* Education */}
           <div className="timeline-section">
             <div className="section-title-box">
               <GraduationCap size={20} className="section-title-icon" />
@@ -132,7 +128,6 @@ function About() {
           </div>
         </div>
 
-        {/* Skills Grid Section */}
         <div className="skills-section">
           <h3>Skills & Expertise</h3>
           <div className="skills-categories-grid">

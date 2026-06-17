@@ -21,7 +21,6 @@
   margin-top: 1rem;
 }
 
-/* Project Card layout */
 .project-card {
   padding: 1.75rem;
   border-radius: var(--radius-lg);
@@ -83,7 +82,6 @@
   flex-grow: 1;
 }
 
-/* Tags grid */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -101,7 +99,6 @@
   border-radius: var(--radius-sm);
 }
 
-/* Link Actions */
 .project-link-box {
   margin-top: auto;
   border-top: 1px solid var(--border-subtle);
